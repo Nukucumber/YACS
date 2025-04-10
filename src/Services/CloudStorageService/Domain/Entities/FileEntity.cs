@@ -2,12 +2,19 @@ namespace CloudStorageService.Domain.Entities;
 
 
 
-public class FileEntity(string name, long size, FileType type)
+public class FileEntity
 {
-    public string Name { get; } = name;
-    public long Size { get; } = size;
+    public string name { get; } = string.Empty;
+    public long size { get; } = default;
+    public FileType type { get; } = FileType.File;
 
-    public FileType Type { get; } = type;
+
+    public FileEntity(string name, long size, FileType type)
+    {
+        this.name = name;
+        this.size = size;
+        this.type = type;
+    }
 }
 
 public enum FileType

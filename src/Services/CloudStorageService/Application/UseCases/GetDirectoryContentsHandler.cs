@@ -11,7 +11,7 @@ public class GetDirectoryContentsHandler
 
     public GetDirectoryContentsHandler(IFileEnvironmentManager fileEnvironmentManager)
     {
-        _fileEnvironmentManager = fileEnvironmentManager;
+        _fileEnvironmentManager = fileEnvironmentManager;                                                                                                    
     }
 
     public DirectoryContentsDto Handle()
