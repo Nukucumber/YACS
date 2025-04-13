@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudStorageService.Domain", "Domain\CloudStorageService.Domain.csproj", "{92F13477-6E4C-4CD4-95A4-4CCD983FB293}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudStorageService.Application", "Application\CloudStorageService.Application.csproj", "{2561B15B-3A00-48D1-A925-4BFB854E5B80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudStorageService.Api", "Presentation\CloudStorageService.Api.csproj", "{4914E8AA-2227-40F6-8ABA-D4D53BD849E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudStorageService.Infrastructure", "Infrastructure\CloudStorageService.Infrastructure.csproj", "{95891E4C-B328-4FD3-B45F-9E78715C8381}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92F13477-6E4C-4CD4-95A4-4CCD983FB293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92F13477-6E4C-4CD4-95A4-4CCD983FB293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92F13477-6E4C-4CD4-95A4-4CCD983FB293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92F13477-6E4C-4CD4-95A4-4CCD983FB293}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2561B15B-3A00-48D1-A925-4BFB854E5B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2561B15B-3A00-48D1-A925-4BFB854E5B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2561B15B-3A00-48D1-A925-4BFB854E5B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2561B15B-3A00-48D1-A925-4BFB854E5B80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4914E8AA-2227-40F6-8ABA-D4D53BD849E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4914E8AA-2227-40F6-8ABA-D4D53BD849E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4914E8AA-2227-40F6-8ABA-D4D53BD849E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4914E8AA-2227-40F6-8ABA-D4D53BD849E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95891E4C-B328-4FD3-B45F-9E78715C8381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95891E4C-B328-4FD3-B45F-9E78715C8381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95891E4C-B328-4FD3-B45F-9E78715C8381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95891E4C-B328-4FD3-B45F-9E78715C8381}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

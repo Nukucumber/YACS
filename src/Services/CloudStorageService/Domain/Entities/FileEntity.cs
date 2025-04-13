@@ -16,9 +16,3 @@ public class FileEntity
         this.type = type;
     }
 }
-
-public enum FileType
-{
-    File,
-    Folder
-}

@@ -4,9 +4,13 @@ using CloudStorageService.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.ServicesRegistration();
+builder.Configuration.AddJsonFile("appsettings.Infrastructure.json");
 
-builder.Services.AddControllers();
+builder.Services
+.InfraOptionsRegistration(builder.Configuration)
+.ServicesRegistration()
+.AddControllers();
+
 
 
 var app = builder.Build();
