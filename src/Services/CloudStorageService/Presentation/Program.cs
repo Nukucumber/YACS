@@ -12,9 +12,11 @@ builder.Services
 .AddControllers();
 
 
-
 var app = builder.Build();
 
 app.MapControllers();
+
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
 app.Run();

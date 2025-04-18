@@ -4,8 +4,9 @@ namespace CloudStorageService.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 
-using CloudStorageService.Application.UseCases;
-using CloudStorageService.Domain.Interfaces;
+using Domain.Interfaces;
+using Application.UseCases;
+using Application.Interfaces;
 using Options;
 using Services;
 
@@ -15,7 +16,9 @@ public static class InfrastructureRegistor
     {
         serviceCollection
         .AddScoped<IFileEnvironmentManager, FileService.FileEnvironmentManager>()
-        .AddScoped<GetDirectoryContentsHandler>();
+        .AddScoped<IUploadMultipleExtension, FileService.FileEnvironmentManager>()
+        .AddScoped<GetDirectoryContentsHandler>()
+        .AddScoped<AddFileToCurrentDirectoryHandler>();
 
         return serviceCollection;
     }

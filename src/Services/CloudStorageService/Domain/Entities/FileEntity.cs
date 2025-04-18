@@ -4,15 +4,17 @@ namespace CloudStorageService.Domain.Entities;
 
 public class FileEntity
 {
-    public string name { get; } = string.Empty;
+    public string fullName { get; } = string.Empty;
     public long size { get; } = default;
     public FileType type { get; } = FileType.File;
+    public Guid guid { get; } = Guid.Empty;
 
 
-    public FileEntity(string name, long size, FileType type)
+    public FileEntity(string fullName, long size, FileType type, Guid guid)
     {
-        this.name = name;
+        this.fullName = fullName;
         this.size = size;
         this.type = type;
+        this.guid = guid;
     }
 }

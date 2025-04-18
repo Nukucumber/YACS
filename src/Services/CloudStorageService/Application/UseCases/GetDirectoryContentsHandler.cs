@@ -13,21 +13,17 @@ public class GetDirectoryContentsHandler
 
     public GetDirectoryContentsHandler(IFileEnvironmentManager fileEnvironmentManager)
     {
-        this.fileEnvironmentManager = fileEnvironmentManager;                                                                                                    
+        this.fileEnvironmentManager = fileEnvironmentManager;
     }
 
 
 
-    public DirectoryContentsDto Handle(string currentPath = "")
+    public DirectoryContentsDto Handle(Guid? pathId = null)
     {
 
-        var path = fileEnvironmentManager.GetCurrentDirectory(currentPath);
-        var files = fileEnvironmentManager.GetFiles(path);
-        
-        return new DirectoryContentsDto
-        (
-            path!,
-            files.ToList()
-        );
+        var files = fileEnvironmentManager.GetFiles(ref pathId);
+
+
+        return new DirectoryContentsDto { CurrentPathId = (Guid)pathId!, Files = files.ToList() };
     }
 }

@@ -1,0 +1,30 @@
+<input type="file" id="fileInput" multiple> <!-- Выбор файлов -->
+<input type="text" id="folderName" placeholder="Dir name"> <!-- Имя папки -->
+<button onclick="uploadFiles()">upload</button>
+
+<script>
+async function uploadFiles() {
+  const fileInput = document.getElementById('fileInput');
+  const folderName = document.getElementById('folderName').value;
+  const formData = new FormData();
+
+  formData.append("pathId", "7febf16f-651b-43b0-a5e3-0da8da49e90d");
+  // Добавляем имя папки
+  formData.append("folderName", folderName);
+
+  // Добавляем файлы
+  for (const file of fileInput.files) {
+    formData.append("files", file);
+  }
+
+
+  // Отправляем запрос
+  const response = await fetch('/api/upload', {
+    method: 'POST',
+    body: formData,
+    'Content-Type': 'application/json'
+  });
+
+  console.log(await response.json());
+}
+</script>
