@@ -5,7 +5,7 @@ var app = builder.Build();
 
 app.MapGet("/", () =>
 {
-    var response = new { rootAnswer = "updated helloWorld" };
+    var response = new { rootAnswer = "Updated helloWorld" };
     return response;
 });
 
