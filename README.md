@@ -1,2 +1,4 @@
 # YACS
-Yet Another Cloud Storage
+---
+Yet another cloud storage
+
