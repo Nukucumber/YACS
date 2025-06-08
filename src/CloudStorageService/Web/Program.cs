@@ -1,6 +1,7 @@
-using System.Text.Json;
-
 namespace CloudStorageService.Web;
+
+using CloudStorageService.Infrastructure;
+
 
 
 class Program
@@ -9,13 +10,13 @@ class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        builder.Services.Inject()
+                        .AddControllers();
+
 
         var app = builder.Build();
 
-        app.MapGet("/", () =>
-        {
-            return JsonSerializer.SerializeToDocument("hiHello");
-        });
+        app.MapControllers();
 
         app.Run();
     }
